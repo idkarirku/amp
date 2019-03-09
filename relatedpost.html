@@ -55,13 +55,13 @@ function artikelterkait() {
 for (
 var labels = getQueryVariable("labels"),
 relmaxtampil = getQueryVariable("num"),
-url = getQueryVariable("url"),
+domain = getQueryVariable("url"),
 res = labels.split(","),
 i = 0,
 text = "";
 res[i];
 )
-text += '<script src="' + url + "/feeds/posts/default/-/" + res[i] + '?alt=json&amp;callback=relpostimgcuplik&amp;max-results=10"><\/script>', i++;
+text += '<script src="' + domain + "/feeds/posts/default/-/" + res[i] + '?alt=json&amp;callback=relpostimgcuplik&amp;max-results=10"><\/script>', i++;
 var relnojudul = 0,
     numchars = 120,
     reljudul = new Array,
