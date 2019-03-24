@@ -3,14 +3,11 @@
     <head>
         <title>Loker Sumatera Service Worker</title>
         <script type="text/javascript">
-            var swsource = "https://raw.githack.com/idkarirku/amp/master/sw.js";
-            if("serviceWorker" in navigator) {
-                navigator.serviceWorker.register(swsource).then(function(reg){
-                    console.log('ServiceWorker scope: ', reg.scope);
-                }).catch(function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            };
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('https://raw.githack.com/idkarirku/amp/master/sw.js')
+           .then(function() { console.log("Service Worker Registered"); });
+}
         </script>
     </head>
     <body>
