@@ -3,7 +3,7 @@
   "name": "Lowongan Kerja Sumatera",
    "display": "standalone",
   "background_color": "linear-gradient(to bottom, #4285f4,#4285f4,#4285f4, yellow)",
-  "theme_color": "#2B0C93",
+  "theme_color": "#4285f4",
   "description": "Berbagi Informasi Seputar Lowongan Kerja",
   "icons": [
     {
