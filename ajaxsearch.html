@@ -24,7 +24,7 @@ body {font:14px -apple-system,'BlinkMacSystemFont','Roboto','Segoe UI','Oxygen-S
 </style>
 </head>
 <body>
-<div id='search-box' title='Type Here For Search'>
+   <div id='search-box' title='Type Here For Search'>
    <form action='/search' id='searchform' method='get'>
       <span class='icon-search'>
          <svg height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'>
@@ -34,12 +34,11 @@ body {font:14px -apple-system,'BlinkMacSystemFont','Roboto','Segoe UI','Oxygen-S
       </span>
       <input name='q' placeholder='Find Here ...' style='outline:0;border:0;background:transparent;' type='text'/>
    </form>
-</div>
-       <script>
+   </div>
+   <script>
     function myHookFn() {
         console.log([arguments[0], this, arguments]);
-    }
-    </script>
-<script src='https://raw.githack.com/idkarirku/amp/master/ajaxsearch.js?live=true&amp;image=true&amp;id=&quot;6242975292707437446&quot;&amp;e=myHookFn'/>
+    }</script>
+<script src='https://raw.githack.com/idkarirku/amp/master/ajaxsearch.js?live=true&amp;image=true&amp;id=&quot;6242975292707437446&quot;&amp;e=myHookFn'>
 </body>
 </html>
