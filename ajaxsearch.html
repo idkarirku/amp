@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Search</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<style type='text/css'>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;display:block;}*{margin:0;padding:0;}html{display:block;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{background:transparent;}table{border-collapse:collapse;border-spacing:0;}*,*:before, *:after {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+body {font:14px -apple-system,'BlinkMacSystemFont','Roboto','Segoe UI','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue',sans-serif;}
+/* Ajax Search */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.ajax-search{padding:20px;background:#fff!important;box-shadow:0 0 15px rgba(0,0,0,0.15);max-height:450px!important}
+.ajax-search h3{font-size:14px;font-weight:normal;margin:0 0 20px 0}
+.ajax-search li{position:relative;display:inline-block;float:left;width:50%;margin:0 0 10px 0;overflow:hidden}
+.ajax-search li h4{font-size:13px;font-weight:normal;margin:0 15px 0 0}
+.ajax-search li h4 a{color:#000;transition:all .3s}
+.ajax-search li h4 mark{background-color:transparent;color:#000;text-decoration:underline;transition:all .3s}
+.ajax-search li h4 a:hover,.ajax-search li h4:hover mark{color:#f44336}
+.ajax-search-image{float:left;margin:0 10px 0 0}
+.ajax-search-image img{border-radius:5px}
+.ajax-search-pager a{display:inline-block;clear:both;overflow:hidden;background:#f44336;color:#fff;font-size:13px;padding:5px 10px;border-radius:3px;margin:15px auto 0 auto}
+.ajax-search-pager a:hover{background:#333;color:#fff}
+@media screen and (max-width:768px){.ajax-search li{position:relative;display:inline-block;float:left;width:100%;margin:0 0 10px 0;overflow:hidden}}
+</style>
+</head>
+<body>
+<div id='search-box' title='Type Here For Search'>
+   <form action='/search' id='searchform' method='get'>
+      <span class='icon-search'>
+         <svg height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'>
+            <path d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/>
+            <path d='M0 0h24v24H0z' fill='none'/>
+         </svg>
+      </span>
+      <input name='q' placeholder='Find Here ...' style='outline:0;border:0;background:transparent;' type='text'/>
+   </form>
+</div>
+<script src='https://raw.githack.com/idkarirku/tautekno/master/ajaxsearch.js?live=true&amp;image=true'/>
+</body>
+</html>
