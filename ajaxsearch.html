@@ -35,6 +35,12 @@ body {font:14px -apple-system,'BlinkMacSystemFont','Roboto','Segoe UI','Oxygen-S
       <input name='q' placeholder='Find Here ...' style='outline:0;border:0;background:transparent;' type='text'/>
    </form>
 </div>
-<script src='https://raw.githack.com/idkarirku/tautekno/master/ajaxsearch.js?live=true&amp;image=true&amp;url=idkarirku.blogspot.com'/>
+       <script>
+    function myHookFn() {
+        console.log([arguments[0], this, arguments]);
+    }
+    </script>
+<script src='https://raw.githack.com/idkarirku/amp/master/ajaxsearch.js?live=true&amp;image=true&amp;url=idkarirku.blogspot.com&amp;e=myHookFn'/>
+  </body>
 </body>
 </html>
