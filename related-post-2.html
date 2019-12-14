@@ -3,7 +3,97 @@
    <head>
       <meta charset='utf-8'/>
       <title>Related Post</title>
-      <style>*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif}body li,body ul{margin:0;float:left;width:100%;}body li{list-style-type:none!important;display:inline;line-height:1em;width:100%;padding:10px 0}body ul{padding:0}span.news-text{font-size:14px;color:#666;line-height:1.2em}body ul li a{font-weight:600;text-decoration:none;display:block;color:#333;transition:all .2s ease;line-height:1.3em}body ul li img{float:left;margin-right:10px;padding:0;background:#eaeaea;width: 45%;height:96px;}.relinkjdulx{font-size:17px;margin-bottom:5px;float:left;width:calc(55% - 10px);}@media only screen and (max-width:568px){span.news-text{display:none}}</style>
+      <style>
+         *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif}
+         /* Default CSS */
+.f {
+	display:flex;
+}
+.if {
+	display:inline-flex;
+}
+.p15 {
+	padding:15px;
+}
+.p15-0 {
+	padding:15px 0;
+}
+.p5 {
+	padding:5px;
+}
+.p10 {
+	padding:10px;
+}
+.ml10 {
+	margin-left:10px;
+}
+.m05 {
+	margin:0 5px;
+}
+.r50 {
+	border-radius:50%;
+}
+.r25 {
+	border-radius:25px;
+}
+.r5 {
+	border-radius:5px;
+}
+.r4 {
+	border-radius:4px;
+}
+.bb {
+	border-bottom:1px solid #efefef;
+}
+.at {
+	align-items:center;
+}
+.jcc {
+	justify-content:center;
+}
+.jcsb {
+	justify-content:space-between;
+}
+.jcsa {
+	justify-content:space-around;
+}
+.fdr {
+	flex-direction:row;
+}
+.fdc {
+	flex-direction:column;
+}
+.fff {
+	background:#fff;
+}
+.000 {
+	background:#000;
+}
+.w100 {
+	width:100%;
+}
+.h100 {
+	height:100%;
+}
+.bs {
+	    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+.efe {
+	background:#efefef;
+}
+.mb15 {
+	margin-bottom:15px;
+}
+.mr10 {
+	margin-right:10px;
+}
+  .ml10 {
+	margin-left:10px;
+}
+.b111 {
+	background:#111;
+}
+    @media only screen and (max-width:568px){span.news-text{display:none}}</style>
    </head>
    <body>
       <ul>
@@ -50,7 +140,7 @@ function artikelterkait() {
             o = relgambar[a];
         reljudul[a] = reljudul[n], relurls[a] = relurls[n], relcuplikan[a] = relcuplikan[n], relgambar[a] = relgambar[n], reljudul[n] = u, relurls[n] = i, relcuplikan[n] = s, relgambar[n] = o
     }
-    for (var g, c = 0, p = Math.floor((reljudul.length - 1) * Math.random()), m = p, d = getQueryVariable("pos"); c < relmaxtampil && (relurls[p] == d || (g = "<li class='news-title'>", g += "<a href='" + relurls[p] + "' rel='nofollow' target='_top' title='" + reljudul[p] + "'><img src='" + relgambar[p] + "'/></a>", g += "<a class='relinkjdulx' href='" + relurls[p] + "' target='_blank'>" + reljudul[p] + "</a>", g += "<span class='news-text'>" + relcuplikan[p] + " ... </span>", g += "</li>", document.write(g), ++c != relmaxtampil)) && (p < reljudul.length - 1 ? p++ : p = 0, p != m););
+    for (var g, c = 0, p = Math.floor((reljudul.length - 1) * Math.random()), m = p, d = getQueryVariable("pos"); c < relmaxtampil && (relurls[p] == d || (g = "<article class='news-title r5 p5 bs efe mb15 post'>", g += "<a href='" + relurls[p] + "' rel='nofollow' target='_top' title='" + reljudul[p] + "'><img class='snippet-thumbnail w100' src='" + relgambar[p] + "'/></a>", g += "<h3 class=''><a class='relinkjdulx' href='" + relurls[p] + "' target='_blank'>" + reljudul[p] + "</a></h3>", g += "<figure class='snippet'><figcaption class='news-text'>" + relcuplikan[p] + " ... </figcaption></figure>", g += "</article>", document.write(g), ++c != relmaxtampil)) && (p < reljudul.length - 1 ? p++ : p = 0, p != m););
 }
 for (
 var labels = getQueryVariable("labels"),
