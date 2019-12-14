@@ -111,6 +111,23 @@ font-size: 18px;
     line-height: 1.5;
     margin: 10px 0;
 }
+.post__image {
+	height:50vh;
+	position:relative;
+}
+.snippet-thumbnail {
+    height: 100%;
+    object-fit: cover;
+}
+.snippet-thumbnail {
+    opacity: 0;
+    transition: all .6s ease;
+    transform: scale(.95) translateY(20px);
+}
+.snippet-thumbnail.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
 .snippet {
     font-size: 12px;
     line-height: 1.5;
@@ -163,7 +180,7 @@ function artikelterkait() {
             o = relgambar[a];
         reljudul[a] = reljudul[n], relurls[a] = relurls[n], relcuplikan[a] = relcuplikan[n], relgambar[a] = relgambar[n], reljudul[n] = u, relurls[n] = i, relcuplikan[n] = s, relgambar[n] = o
     }
-    for (var g, c = 0, p = Math.floor((reljudul.length - 1) * Math.random()), m = p, d = getQueryVariable("pos"); c < relmaxtampil && (relurls[p] == d || (g = "<article class='news-title r5 p5 bs efe mb15 post'>", g += "<a href='" + relurls[p] + "' rel='nofollow' target='_top' title='" + reljudul[p] + "'><img class='snippet-thumbnail w100' src='" + relgambar[p] + "'/></a>", g += "<h3 class=''><a class='relinkjdulx' href='" + relurls[p] + "' target='_blank'>" + reljudul[p] + "</a></h3>", g += "<figure class='snippet'><figcaption class='news-text'>" + relcuplikan[p] + " ... </figcaption></figure>", g += "</article>", document.write(g), ++c != relmaxtampil)) && (p < reljudul.length - 1 ? p++ : p = 0, p != m););
+    for (var g, c = 0, p = Math.floor((reljudul.length - 1) * Math.random()), m = p, d = getQueryVariable("pos"); c < relmaxtampil && (relurls[p] == d || (g = "<article class='news-title r5 p5 bs efe mb15 post'>", g += "<div class='post__image w100 bb'><a href='" + relurls[p] + "' rel='nofollow' target='_top' title='" + reljudul[p] + "'><img class='snippet-thumbnail lazy w100' src='" + relgambar[p] + "'/></a></div>", g += "<h3 class=''><a class='relinkjdulx' href='" + relurls[p] + "' target='_blank'>" + reljudul[p] + "</a></h3>", g += "<figure class='snippet'><figcaption class='news-text'>" + relcuplikan[p] + " ... </figcaption></figure>", g += "</article>", document.write(g), ++c != relmaxtampil)) && (p < reljudul.length - 1 ? p++ : p = 0, p != m););
 }
 for (
 var labels = getQueryVariable("labels"),
@@ -182,6 +199,10 @@ var relnojudul = 0,
     relcuplikan = new Array,
     relgambar = new Array;
 document.write(text + '<script>artikelterkait();<\/script>');
+var lazyImages=[].slice.call(document.querySelectorAll("img.lazy"));if("IntersectionObserver" in window&&"IntersectionObserverEntry" in window&&"intersectionRatio" in window.IntersectionObserverEntry.prototype){let lazyImageObserver=new IntersectionObserver(function(entries,observer){entries.forEach(function(entry){if(entry.isIntersecting){let lazyImage=entry.target;lazyImage.src=lazyImage.dataset.src;lazyImage.srcset=lazyImage.dataset.srcset;lazyImage.classList.remove("lazy");
+lazyImage.classList.add("active");
+lazyImageObserver.unobserve(lazyImage)}})});lazyImages.forEach(function(lazyImage){
+lazyImageObserver.observe(lazyImage)})}});
 </script>
       </ul>
    </body>
